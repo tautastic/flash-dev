@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        @apply font-sans bg-black text-white;
+    }
+}
+
+@layer components {
+    .hero {
+        @apply flex flex-col items-center text-center justify-center
+        min-h-[50vh];
+    }
+
+    .btn-primary {
+        @apply inline-flex items-center justify-center gap-3 p-3
+    }
+
+    .focus-ring {
+        @apply duration-300 cursor-pointer focus:outline-none focus:ring-1
+        focus:ring-neutral-500 focus:ring-offset-1
+        focus:ring-offset-neutral-900 focus:transition
+    }
+
+    .btn-flat {
+        @apply focus-ring inline-flex items-center justify-center gap-3
+        rounded-lg border-[1px] border-neutral-600 bg-gradient-to-br
+        from-black to-neutral-900 p-3 text-center shadow-lg shadow-stone-800/60
+        ease-in-out hover:bg-gradient-to-tl hover:shadow-stone-800
+        focus:bg-gradient-to-tl focus:shadow-stone-800
+    }
+
+    .rainbow {
+        background-image: -webkit-linear-gradient(0deg,
+            #ff8b3e 1.8%,
+            #f0ea5e,
+            #5bbb74 50%,
+            #52a9ff 61%,
+            #f65cb6,
+            #ff6369
+        );
+    }
+}
